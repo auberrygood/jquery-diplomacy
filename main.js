@@ -17,7 +17,7 @@ function validateNumber(evt) {
   const userNum = parseInt(numberInput.val(), 10);  // typecast to num
 
   const formFeedback = $('#formFeedback');
-  if (9 < userNum) {
+  if (!userNum || userNum > 9) {
     formFeedback.text('Please enter a smaller number');
   } else {
     formFeedback.text('You are good to go!');
